@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+    .custom-bg {
+        background-color: #6777ef;
+        color: #ffff;
+    }
+
+    .warna {
+        background-color: #6777ef;
+    }
+}

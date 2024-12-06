@@ -1,12 +1,14 @@
 
-import Dashboard from "./components/dashboard";
+
 import Sidebar from "./sidebar";
 
 function App() {
   return(
     <div>
+      <div className="">
+
       <Sidebar />
-      <Dashboard />
+      </div>
     </div>
   )
 }

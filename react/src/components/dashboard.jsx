@@ -1,49 +1,27 @@
+import React, { useState } from "react";
+
 function Dashboard() {
+  const numbers = ["satu", "dua", "tiga"];
   return (
-    <div>
-      <div className="p-4 sm:ml-64">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
-          <a
-            href=""
-            className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-          >
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
-            </p>
-          </a>
+    <>
+      <div className="p-4 sm:ml-8 mt-10">
+        <div className="p-4 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {numbers.map((number) => (
+              <div className="flex items-center justify-center h-24 rounded custom-bg">
+                <p className="text-2xl text-white dark:text-white">{number}</p>
+              </div>
+            ))}
+          </div>
 
-          <a
-            href=""
-            className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-          >
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
-            </p>
-          </a>
+          <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-white-800 mt-6 border-2">
+            <p className="">
 
-          <a
-            href=""
-            className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-          >
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
             </p>
-          </a>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
