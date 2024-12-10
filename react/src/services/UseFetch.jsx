@@ -1,29 +1,29 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
-
-const BASE_URL = 'http://localhost:8000/api/'
+const BASE_URL = 'http://localhost:8000/api/';
 
 const useFetch = (endpoint) => {
-    const [data, setData ] = useState([]);
+    const [data, setData] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(`${BASE_URL}${endpoint}`);
-                setData(response.data)
-                setLoading(false)
-            } catch (error) {
-                setError(error.massagge)
-                setLoading(false)
-            }
+    const fetchData = async () => {
+        try {
+            const response = await axios.get(`${BASE_URL}${endpoint}`);
+            setData(response.data);
+            setLoading(false);
+        } catch (error) {
+            setError(error.message);
+            setLoading(false);
         }
+    };
+
+    useEffect(() => {
         fetchData();
-    }, [endpoint])
+    }, [endpoint]);
 
-    return { data, error, loading }
-}
+    return { data, error, loading, refetch: fetchData };
+};
 
-export default useFetch
+export default useFetch;

@@ -20,7 +20,7 @@ const AppContent = () => {
       {location.pathname !== "/login" && <Navbar />}
       <Routes>
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/table" element={<Table />} />
+        {/* <Route path="/table" element={<Table />} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </>
