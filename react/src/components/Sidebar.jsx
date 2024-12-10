@@ -1,4 +1,5 @@
 import React from "react";
+import Logout from "../routes/Logout";
 
 const Sidebar = ({ isOpen }) => {
   return (
@@ -52,6 +53,7 @@ const Sidebar = ({ isOpen }) => {
             </li>
             
           </ul>
+        <Logout />
         </div>
       </aside>
     </section>
