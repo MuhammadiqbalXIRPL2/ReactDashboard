@@ -10,10 +10,9 @@ const Logout = () => {
   };
 
   return (
-    <section className="">
       <button
         onClick={handleLogout}
-        className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+        className="flex items-center p-2 text-white-900 hover:text-white hover:bg-red-700 group bg-red-300 rounded-md font-medium"
       >
         <svg
           className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -27,7 +26,6 @@ const Logout = () => {
         </svg>
         <span className="ms-3">Logout</span>
       </button>
-    </section>
   );
 };
 

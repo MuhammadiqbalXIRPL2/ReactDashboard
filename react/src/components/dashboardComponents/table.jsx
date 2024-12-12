@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import useFetch from "../services/UseFetch";
+import useFetch from "../../services/UseFetch";
+import TableSkeleton from "../skeleton/TableSkeleton";
 
 const Table = () => {
   const { data, error, loading, refetch } = useFetch("data");
@@ -32,7 +33,7 @@ const Table = () => {
     return () => clearInterval(interval);
   }, [refetch]);
 
-  if (loading) return <p>...Loading...</p>;
+  if (loading) return <TableSkeleton />;
 
   if (error) return <p>Error: {error}</p>;
 

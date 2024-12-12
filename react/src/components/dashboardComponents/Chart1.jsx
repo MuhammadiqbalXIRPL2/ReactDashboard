@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactApexChart from "react-apexcharts";
-import useFetch from "../services/UseFetch";
+import useFetch from "../../services/UseFetch";
+import ChartSkeleton from "../skeleton/ChartSkeleton";
 
 const Chart1 = () => {
   const { data, error, loading, refetch } = useFetch("time");
@@ -68,7 +69,7 @@ const Chart1 = () => {
     return () => clearInterval(interval);
   }, [refetch]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <ChartSkeleton />;
   if (error) return <p>Error: {error}</p>;
 
   return (

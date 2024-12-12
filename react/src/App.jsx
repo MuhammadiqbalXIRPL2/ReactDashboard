@@ -6,10 +6,11 @@ import {
   useLocation,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Table from "./Page/table";
+import Table from "./components/dashboardComponents/table";
 import LoginPage from "./Page/LoginPage";
 import Dashboard from "./Page/dashboard";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import IssuePage from "./Page/IssuePage";
 
 const App = () => {
   return (
@@ -32,6 +33,14 @@ const AppContent = () => {
           element={
             <ProtectedRoute>
               <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/issue"
+          element={
+            <ProtectedRoute>
+              <IssuePage />
             </ProtectedRoute>
           }
         />
