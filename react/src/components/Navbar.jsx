@@ -18,9 +18,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-start rtl:justify-end">
               <SidebarButton toggleSidebar={toggleSidebar} />
-
               <a href="#" className="flex ms-2 md:me-24">
-                 
                 <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
                   Transaction Request
                 </span>
