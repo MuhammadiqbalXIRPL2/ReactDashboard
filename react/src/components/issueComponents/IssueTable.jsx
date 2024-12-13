@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import useFetch from "../../services/UseFetch";
 import TableSkeleton from "../skeleton/TableSkeleton";
+import Clipboard from "./Clipboard";
 
 const IssueTable = ({ startDate, endDate }) => {
   const { data = [], error, loading, refetch } = useFetch("issue");
@@ -90,7 +91,7 @@ const IssueTable = ({ startDate, endDate }) => {
                   <td className="px-6 py-4 text-sm">{item.type_transaksi}</td>
                   <td className="px-6 py-4 text-sm">
                     <span className="font-medium text-blue-600 dark:text-blue-500">
-                      {item.url}
+                      <Clipboard text={item.url} />
                     </span>
                   </td>
                   <td className="px-6 py-4 text-sm">{item.response_message}</td>
